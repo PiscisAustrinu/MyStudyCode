@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算</title>
+    <!--
+        Javascript中所有的变量都可以作为Boolean类型
+        0，null，undefined，空串都为假
+
+        &&：
+            1.当表达式全为真时，返回最后一个为真的值
+            2.当表达式中有一个为假时，返回第一个为假的值
+
+        ||:
+            1.当表达式全为假时，返回最后一个表达式的值
+            2.只要有一个表达式的值为真。就会把第一个为真的表达式的值返回
+    -->
+    <script type="text/javascript">
+        var a = "abc"
+        var b = true
+        var c =false
+        var d = null
+        alert(b&&a)
+        alert(c&&a)
+        alert(d&&a)
+        alert(c||d)
+        alert(c||a||b)
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

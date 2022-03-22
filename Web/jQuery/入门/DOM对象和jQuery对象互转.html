@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM对象和jQuery对象互转</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            alert(document.getElementById("test"))
+            alert($(document.getElementById("test")))
+            alert($(document.getElementById("test"))[0])
+        })
+    </script>
+</head>
+<body>
+<div id="test"></div>
+</body>
+</html>

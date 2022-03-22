@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>helloWorld</title>
+    <script src = "http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function (){
+            var btnObj = document.getElementById("btn01")
+            btnObj.onclick = function (){
+                alert("javaScript原生单击事件")
+            }
+        }
+        $(function (){   //表示页面加载完成之后相当于window。onload
+           var $btnObj =  $("#btn02")
+           $btnObj.click(function (){
+               alert("jQuery的单击事件")
+           })
+        })
+    </script>
+</head>
+<body>
+    <button id="btn01">say hello</button>
+    <button id="btn02">say Hello</button>
+</body>
+</html>

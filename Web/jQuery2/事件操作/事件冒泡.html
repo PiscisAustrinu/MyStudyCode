@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件冒泡</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            $("div").click(function (){
+                alert("div事件")
+            })
+            $("span").click(function (){
+                alert("span事件")
+                return false    //阻止返回
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>我是div
+        <span>我是span</span>
+    </div>
+</body>
+</html>

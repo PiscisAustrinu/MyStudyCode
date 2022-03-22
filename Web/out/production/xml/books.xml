@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!--
+    author:杨凌波
+    date:2021年11月23日
+-->
+<books>
+    <book sn = "SN123">
+        <name>时间简史</name>
+        <author>霍金</author>
+        <price>75</price>
+    </book>
+    <book sn = "SN1234">
+        <name>百年孤独</name>
+        <author>
+            <![CDATA[马尔克斯--->>]]>         //CDATA告诉xml里面内容是纯文本不需要xml语法解析
+        </author>
+        <price>30</price>
+    </book>
+</books>

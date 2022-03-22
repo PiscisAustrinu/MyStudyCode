@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC.iml" filepath="$PROJECT_DIR$/SpringMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC-annotation/SpringMVC-annotation.iml" filepath="$PROJECT_DIR$/SpringMVC-annotation/SpringMVC-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC-demo1/SpringMVC-demo1.iml" filepath="$PROJECT_DIR$/SpringMVC-demo1/SpringMVC-demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC-demo2/SpringMVC-demo2.iml" filepath="$PROJECT_DIR$/SpringMVC-demo2/SpringMVC-demo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC-demo3/SpringMVC-demo3.iml" filepath="$PROJECT_DIR$/SpringMVC-demo3/SpringMVC-demo3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC-demo4/SpringMVC-demo4.iml" filepath="$PROJECT_DIR$/SpringMVC-demo4/SpringMVC-demo4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC-demo5/SpringMVC-demo5.iml" filepath="$PROJECT_DIR$/SpringMVC-demo5/SpringMVC-demo5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC-demo6/SpringMVC-demo6.iml" filepath="$PROJECT_DIR$/SpringMVC-demo6/SpringMVC-demo6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC-jsp/SpringMVC-jsp.iml" filepath="$PROJECT_DIR$/SpringMVC-jsp/SpringMVC-jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC-rest/SpringMVC-rest.iml" filepath="$PROJECT_DIR$/SpringMVC-rest/SpringMVC-rest.iml" />
+    </modules>
+  </component>
+</project>

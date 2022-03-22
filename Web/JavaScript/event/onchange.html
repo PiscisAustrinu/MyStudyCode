@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onchange</title>
+    <script type="text/javascript">
+        function onchangeFun(){
+            alert("已经喜欢别的语言")
+        }
+
+        window.onload = function (){
+            var slObj = document.getElementById("01")
+            slObj.onchange = function () {
+                alert("已经更变使用的语言")
+            }
+        }
+    </script>
+</head>
+<body>
+    请选择你心中最好的语言:
+    <select onchange="onchangeFun()">
+        <option>--语言--</option>
+        <option>C</option>
+        <option>C++</option>
+        <option>Java</option>
+        <option>python</option>
+        <option>php</option>
+        <option>JavaScript</option>
+    </select>
+    <br/>
+    请选择你使用的语言
+    <select id="01">
+        <option>--语言--</option>
+        <option>Java</option>
+        <option>go</option>
+        <option>C#</option>
+        <option>html</option>
+    </select>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jqueryCSS</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 260px;
+        }
+        div.border{
+            border: 2px white solid;
+        }
+        div.RedDiv{
+            background-color: red;
+        }
+        div.blackDiv{
+            border: 5px blue solid;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function (){
+            var $divEle = $('div:first')
+            $('#btn01').click(function (){
+                $divEle.addClass("RedDiv blackDiv")
+            })
+            /*addclass()给对象添加CSS*/
+            $('#btn02').click(function (){
+                $divEle.removeClass("RedDiv")
+            })
+            /*去除CSS*/
+            $('#btn03').click(function (){
+                $divEle.toggleClass("blackDiv")
+            })
+            /*有则删除，无则添加*/
+            $('#btn04').click(function (){
+                var os  = $divEle.offset();  //获取坐标
+                alert("顶边距："+os.top+"左边距："+os.left)
+                $divEle.offset({
+                    top:50,
+                    left:60
+                })
+            //    设置坐标
+            })
+        })
+    </script>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td>
+                <div class="border">
+
+                </div>
+            </td>
+            <td>
+                <div class="btn">
+                    <input type="button" value="addClass()" id="btn01">
+                    <input type="button" value="removeClass()" id="btn02">
+                    <input type="button" value="toggleClass()" id="btn03">
+                    <input type="button" value="offset()" id="btn04">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

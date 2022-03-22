@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attr()和prop()</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            alert($(":checkbox:first").attr("checked"))
+            alert($(":checkbox:last").prop("checked"))
+        })
+        /*
+        * attr可以设置和获取属性的值，不推荐checked、readOnly、select、disable
+        * prop可以设置和获取属性的值，推荐  checked、readOnly、select、disable
+        * */
+    </script>
+</head>
+<body>
+多选：<input type="checkbox" name = "che1" value="checkbox">check1
+     <input type="checkbox" name = "che2"   value="checkbox" checked ="checked">check2
+</body>
+</html>

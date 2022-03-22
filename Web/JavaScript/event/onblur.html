@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onblur</title>
+    <script type="text/javascript">
+        function onblurFun(){
+            //consle是控制台对象，是由Javascript语言提供，专门用来向浏览器的控制器打印输出，用于测试使用
+            //log()是打印的方法
+            console.log("静态注册失去焦点事件")
+        }
+        window.onblur = function (){
+            var passwordObj = document.getElementById("password")
+            passwordObj.onblur = function (){
+                console.log("动态注册失去焦点")
+            }
+        }
+    </script>
+</head>
+<body>
+    用户名：<input type="text" onblur="onblurFun()"><br/>
+    密码：<input id="password" type="password"><br/>
+</body>
+</html>

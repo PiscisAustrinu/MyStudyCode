@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidMenu</string>
+    <string name="hello_world">城市环境系统功能菜单</string>
+    <string name="menu_settings">Settings</string>
+</resources>

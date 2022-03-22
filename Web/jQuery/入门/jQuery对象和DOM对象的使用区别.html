@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery对象和DOM对象的使用</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            // document.getElementById("testDiv").innerHTML = "这是dom对象的属性InnerHTML"
+            $("#testDiv").click(function (){
+                alert("jQuery对象调用jQuery方法")
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <div id="testDiv">Atguigu is Very Good!</div>
+    <button id="dom2dom">使用dom对象调用dom方法</button>
+    <button id="dom2jQuery">使用dom对象调用jQuery方法</button>
+    <button id="jQuery2jQuery">使用jQuery对象调用jQuery方法</button>
+    <button id="jQuery2dom">使用jQuery对象调用dom方法</button>
+</body>
+</html>

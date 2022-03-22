@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object形式的自定义对象</title>
+    <!--
+        对象的定义：
+            var 变量名 = new Object();  //对象实例
+            变量名.属性名 = 值            //定义一个属性
+            变量名.函数名 = function(){} //定义一个函数
+        对象的访问：
+            变量名.属性/函数名();
+    -->
+    <script type="text/javascript">
+        var student = new Object()
+        alert(typeof (student))
+        student.name = "杨凌波"
+        student.age = 20
+        student.fun = function (){
+            alert("姓名："+this.name+",年龄"+this.age)
+        }
+        alert(student.fun())
+    </script>
+</head>
+<body>
+
+</body>
+</html>

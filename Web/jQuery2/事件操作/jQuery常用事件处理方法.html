@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery常用事件处理方法</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            /*//click()绑定单击事件
+            $("h5").click(function (){
+                alert("绑定click单击事件")
+            })
+            //click触发单击事件
+            $("button").click(function (){
+                $("h5").click()
+            })
+            //mouseover()鼠标移入事件
+            $("h5").mouseover(function (){
+                console.log("我进来了")
+            })
+            //mouseout()鼠标移出事件
+            $("h5").mouseout(function (){
+                console.log("我出去了")
+            })*/
+            //bind()为同一个元素绑定多个事件
+            // $("h5").bind("click mouseover mouseout",function (){
+            //     console.log("bind绑定的事件")
+            // })
+            // //解绑
+            // $("h5").unbind("click")
+            //每个事件只响应一次
+            // $("h5").one("click mouseover mouseout",function (){
+            //     console.log("one绑定的事件")
+            // })
+
+        })
+
+    </script>
+</head>
+<body>
+    <h5 id="title">jQuery常用事件
+        <button>按钮</button>
+    </h5>
+</body>
+</html>
