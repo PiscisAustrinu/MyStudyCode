@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    配置User对象创建-->
+    <bean id="user" class="com.Ylb.Spring5.User"/>
+<!--    使用set方法进行属性注入-->
+    <bean id="people" class="com.Ylb.Spring5.People">
+        <property name="name" value="杨凌波"/>
+        <property name="age" value="20"/>
+        <property name="sex">
+            <value><![CDATA[<<扶她》》]]></value>
+        </property>
+    </bean>
+
+<!--    使用有参构造器进行属性注入-->
+    <bean id="student1" class="com.Ylb.Spring5.Student">
+        <constructor-arg name="name" value="杨凌波"/>
+        <constructor-arg name="id" value="19999162"/>
+    </bean>
+<!--    使用p名称空间进行属性注入-->
+    <bean id="people1" class="com.Ylb.Spring5.People" p:name="韦炎" p:age="22" p:sex="女"/>
+
+    <bean id="service" class="com.Ylb.Spring5.Service.Service">
+        <property name="dao" ref="daoImpl"/>
+    </bean>
+
+    <bean id="daoImpl" class="com.Ylb.Spring5.Dao.DaoImpl"/>
+
+<!--    内部bean注入-->
+    <bean id="employee" class="com.Ylb.Spring5.bean.Employee">
+        <constructor-arg name="name" value="杨凌波"/>
+        <constructor-arg name="id" value="19999162"/>
+        <constructor-arg name="dept">
+            <bean id="dept" class="com.Ylb.Spring5.bean.Dept">
+                <constructor-arg name="name" value="安保部"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+<!--    级联赋值-->
+    <bean id="employee1" class="com.Ylb.Spring5.bean.Employee">
+        <constructor-arg name="name" value="杨凌波"/>
+        <constructor-arg name="id" value="19999162"/>
+        <constructor-arg name="dept" ref="dept1"/>
+<!--        <property name="dept.name" value="技术部"/>-->
+    </bean>
+    <bean id="dept1" class="com.Ylb.Spring5.bean.Dept">
+        <constructor-arg name="name" value="财务部"/>
+    </bean>
+
+<!--    注入集合类型属性-->
+    <bean id="stu" class="com.Ylb.Spring5.colletion.Stu">
+        <constructor-arg name="name">
+            <array>
+                <value>杨凌波</value>
+                <value>韦炎</value>
+            </array>
+        </constructor-arg>
+        <constructor-arg name="list">
+            <list>
+                <value>JAVA</value>
+                <value>PHP</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="map" ref="map"/>
+        <constructor-arg name="set">
+            <set>
+                <value>男</value>
+                <value>女</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg>
+            <list>
+                <ref bean="course1"/>
+                <ref bean="course2"/>
+            </list>
+        </constructor-arg>
+
+    </bean>
+    <bean id="course1" class="com.Ylb.Spring5.colletion.Course">
+        <constructor-arg name="cname" value="Spring5"/>
+    </bean>
+    <bean id="course2" class="com.Ylb.Spring5.colletion.Course">
+        <constructor-arg name="cname" value="SpringMVC"/>
+    </bean>
+
+    <util:map id="map">
+        <entry key="C++" value="c草"/>
+        <entry key="C#" value="c艹艹"/>
+    </util:map>
+
+    <bean id="myBean" class="com.Ylb.Spring5.FactoryBean"/>
+
+    <bean id="LifeCircle" class="com.Ylb.Spring5.LifeCircle" init-method="init_method" destroy-method="destroy_method">
+        <constructor-arg name="name" value="杨凌波"/>
+    </bean>
+<!--    配置后置处理器-->
+<!--    <bean id="myBeanPost" class="com.Ylb.Spring5.MyBeanPost"/>-->
+
+<!--实现自动装配
+    bean标签属性autowire,配置自动装配
+    autowire属性常用两个值:
+        byName根据属性名称注入,注入值bean的id值和类属性名称一样
+        byType根据属性类型注入
+-->
+    <bean id="student" class="com.Ylb.Spring5.autowire.Student" autowire="byName"/>
+
+    <bean id="aClass" class="com.Ylb.Spring5.autowire.Class"/>
+
+
+<!--    直接配置连接池-->
+<!--    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">-->
+<!--        <property name="driverClassName" value="com.mysql.jdbc.Diver"/>-->
+<!--        <property name="url" value="jdbc:mysql://localhost:3306/book"/>-->
+<!--        <property name="username" value="root"/>-->
+<!--        <property name="password" value="520227"/>-->
+<!--    </bean>-->
+
+<!--    引入外部属性文件-->
+<!--    <context:property-placeholder location="jdbc.properties"/>-->
+<!--&lt;!&ndash;        配置连接池&ndash;&gt;-->
+<!--        <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">-->
+<!--            <property name="driverClassName" value="${prop.driverClass}"/>-->
+<!--            <property name="url" value="${prop.url}"/>-->
+<!--            <property name="username" value="${prop.userName}"/>-->
+<!--            <property name="password" value="${prop.password}"/>-->
+<!--        </bean>-->
+
+<!--    前置依赖配置-->
+    <bean id="beanB" class="com.Ylb.Spring5.book.Foo" depends-on="map"/>
+
+</beans>

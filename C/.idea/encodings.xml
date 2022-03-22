@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Banker.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CMakeLists.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CircleQueue.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/LBJBCZ.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Queue.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/SeqStack.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/String.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/String.exe" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/main.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/zimu.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/链表.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/链表的创建.c" charset="GBK" />
+  </component>
+</project>

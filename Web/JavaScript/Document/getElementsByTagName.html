@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementsByTagName</title>
+    <script type="text/javascript">
+        var hobbies = document.getElementsByTagName("input")
+        function checkAll(){
+            for (var i = 0;i<hobbies.length;i++)
+                hobbies[i].checked =  true
+        }
+    </script>
+</head>
+<body>
+    <input type="checkbox" value="c++" checked = "checked">C++
+    <input type="checkbox" value="Java">Java
+    <input type="checkbox" value="JavaScript">JavaScript
+    <br/>
+    <button onclick="checkAll()">全选</button>
+</body>
+</html>

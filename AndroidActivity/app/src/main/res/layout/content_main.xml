@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/textShow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="输入通风数据：" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:inputType="textUri"
+        />
+
+    <Button android:id = "@+id/ok"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="接受"
+        android:padding="3dip"
+        />
+    <Button   android:id = "@+id/cancel"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="3dip"
+        android:text="撤销"
+        />
+
+</LinearLayout>

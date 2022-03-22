@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <h1>首页</h1>
+    <a th:href="@{/hello/success}">跳转到success</a><br/>
+    <a th:href="@{/hello/helloSuccess}">测试@RequestMapping的value属性-->helloSuccess</a><br/>
+    <a th:href="@{/hello/success}">测试@RequestMapping的value属性-->success</a><br/>
+    <a th:href="@{/hello/success}">测试@RequestMapping的method属性-->GET</a><br/>
+    <form th:action="@{/hello/success}" method="post">
+        <input type="submit" value="测试@RequestMapping的method属性-->POST">
+    </form><br/>
+    <a th:href="@{/hello/testGetMapping}">测试@GetMapping</a><br/>
+    <form th:action="@{/hello/testPut}" method="put">
+        <input type="submit" value="测试form表单能否发送put或delete请求">
+    </form>
+    <a th:href="@{/hello/testParamsAndHeaders(username,password='123456')}">测试@RequestMapping的params,headers属性</a><br/>
+    <a th:href="@{/hello/a3a}">测试Ant-->使用？</a><br/>
+    <a th:href="@{/hello/ausigda}">测试Ant-->使用*</a><br/>
+    <a th:href="@{/hello/sas/asa/testAnt}">测试Ant-->使用**</a><br/>
+    <a th:href="@{/hello/testPath/1/杨凌波}">测试路径中的占位符{}</a>
+</body>
+</html>

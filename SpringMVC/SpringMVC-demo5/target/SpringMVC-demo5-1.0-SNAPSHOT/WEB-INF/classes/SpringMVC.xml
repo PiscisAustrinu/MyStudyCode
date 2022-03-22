@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+<!--扫描包-->
+    <context:component-scan base-package="com.Ylb.mvc"/>
+    <bean class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
+        <property name="order" value="1"/>
+        <property name="characterEncoding" value="UTF-8"/>
+        <property name="templateEngine">
+            <bean class="org.thymeleaf.spring5.SpringTemplateEngine">
+                <property name="templateResolver">
+                    <bean class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
+<!--                        视图前缀-->
+                        <property name="prefix" value="/WEB-INF/templates/"/>
+<!--                        视图后缀-->
+                        <property name="suffix" value=".html"/>
+                        <property name="templateMode" value="HTML5"/>
+                        <property name="characterEncoding" value="UTF-8"/>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+<!--    配置首页视图控制器-->
+    <mvc:view-controller path="/" view-name="index"/>
+<!--    开启mvc注解驱动-->
+    <mvc:annotation-driven>
+<!--        处理响应中文乱码-->
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="defaultCharset" value="UTF-8"/>
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/html</value>
+                        <value>application/json</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+<!--    开启服务器对静态资源的访问-->
+    <mvc:default-servlet-handler/>
+<!--    配置拦截器-->
+    <mvc:interceptors>
+<!--        <bean class="com.Ylb.mvc.Interceptor.FirstInterceptor"/>-->
+<!--        <ref bean="firstInterceptor"/>-->
+<!--        以上两种配置方式都是对DispatcherServlet所做处理的所有请求进行拦截-->
+<!--        <mvc:interceptor>-->
+<!--            需要拦截的请求-->
+<!--            <mvc:mapping path="/**"/>-->
+<!--            不需要拦截的请求-->
+<!--            <mvc:exclude-mapping path="/"/>-->
+<!--            拦截器-->
+<!--            <ref bean="firstInterceptor"/>-->
+<!--        </mvc:interceptor>-->
+        <ref bean="firstInterceptor"/>
+        <ref bean="secondInterceptor"/>
+    </mvc:interceptors>
+<!--&lt;!&ndash;    配置异常处理器&ndash;&gt;-->
+<!--    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+<!--        <property name="exceptionMappings">-->
+<!--            <props>-->
+<!--                <prop key="java.lang.ArithmeticException">error</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--&lt;!&ndash;        设置一个属性名，将出现的异常在请求域中进行共享&ndash;&gt;-->
+<!--        <property name="exceptionAttribute" value="ex"/>-->
+<!--    </bean>-->
+</beans>

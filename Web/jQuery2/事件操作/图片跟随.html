@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片跟随</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            $("#1").bind("mouseover mouseout mousemove",function (event){
+                if (event.type=="mouseover"){
+                    $("#2").show()
+                }else if(event.type=="mouseout"){
+                    $("#2").hide()
+                }
+                else if(event.type == "mousemove"){
+                    $("#2").offset({
+                        left:event.pageX,
+                        top:event.pageY
+                    })
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <img src="1.jpg" id="1">
+    <div id="2">
+        <img src="2.jpg">
+    </div>
+</body>
+</html>

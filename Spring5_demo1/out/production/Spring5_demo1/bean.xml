@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--    配置静态内部类-->
+<!--    <bean id="innerObject" class="com.Ylb.Spring5.OuterClass $InnerClass"/>-->
+<!--    静态方法的bean定义-->
+    <bean id="staticFactoryService" class="com.Ylb.Spring5.book.StaticFactoryService" factory-method="getInstance"/>
+
+<!--    工厂类bean-->
+    <bean id="instanceFactory" class="com.Ylb.Spring5.book.InstanceFactory"/>
+<!--    使用工厂类的方法实例目标类的bean-->
+    <bean id="foo" factory-bean="instanceFactory" factory-method="getFooInstance"/>
+
+<!--    父Bean包含name属性-->
+    <bean id="parentBean" class="com.Ylb.Spring5.parent">
+        <property name="name" value="杨凌波"/>
+    </bean>
+<!--使用继承配置，子Bean的name属性覆盖父Bean 的name属性-->
+    <bean id="childBean" class="com.Ylb.Spring5.parent" parent="parentBean">
+        <property name="name" value="韦炎"/>
+        <property name="age" value="22"/>
+    </bean>
+
+<!--    Bean方法的替换-->
+    <bean id="oldEraPeople" class="com.Ylb.Spring5.MethodReplacer.OldEraPeople">
+        <!--        方法替换配置-->
+        <replaced-method name="eat" replacer="newEraPeople">
+            <arg-type>String</arg-type>
+        </replaced-method>
+    </bean>
+
+    <bean id="newEraPeople" class="com.Ylb.Spring5.MethodReplacer.NewEraPeople"/>
+
+    <bean id="beanA" class="com.Ylb.Spring5.Aware.ClassA"/>
+    <bean id="beanB" class="com.Ylb.Spring5.Aware.ClassB" scope="prototype"/>
+
+
+<!--    依赖注入配置的简写-->
+    <bean id="user" class="com.Ylb.Spring5.C_and_P.C" c:name="杨凌波" p:age="12" c:p-ref="P"/>
+
+    <bean id="P" class="com.Ylb.Spring5.C_and_P.P"/>
+
+
+
+<!--&lt;!&ndash;    占位符替换Bean定义，使用properties指定属性文件&ndash;&gt;-->
+<!--    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+<!--        <property name="properties" value="classpath:jdbc.properties"/>-->
+<!--    </bean>-->
+<!--    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">-->
+<!--        <property name="driverClassName" value="${prop.driverClass}"/>-->
+<!--        <property name="url" value="${prop.url}"/>-->
+<!--        <property name="username" value="${prop.userName}"/>-->
+<!--        <property name="password" value="${prop.password}"/>-->
+<!--    </bean>-->
+
+<!--    使用BeanFactoryPostProcessor改变类的属性值-->
+    <bean id="helloService" class="com.Ylb.Spring5.BeanFactoryPostProcessor.HelloService">
+        <property name="name" value="杨凌波"/>
+    </bean>
+    <bean class="com.Ylb.Spring5.BeanFactoryPostProcessor.HelloBeanFactoryPostProcessor"/>
+
+
+    <bean id="userService" class="com.Ylb.Spring5.Aware_user.UserService"/>
+<!--    <bean id="userRegisterEvent" class="com.Ylb.Spring5.Aware_user.UserRegisterEvent"/>-->
+    <bean id="userEventListener" class="com.Ylb.Spring5.Aware_user.UserEventListener"/>
+    <bean id="user1" class="com.Ylb.Spring5.Aware_user.User" p:name="杨凌波"/>
+
+<!--    全局懒加载配置-->
+    <beans default-lazy-init="true"></beans>
+
+
+</beans>

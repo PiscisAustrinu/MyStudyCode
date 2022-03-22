@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementById</title>
+    <script type="text/javascript">
+        /*
+        * 需求：用户点击验证按钮，获取输出框的内容，并验证是否合法
+        * 字母、数字、下划线。长度8-16
+        * */
+        function onclickFun(){
+            var usernameObj = document.getElementById("username")
+            alert(usernameObj.value)
+            var usernameText = usernameObj.value
+            var patt = /^\w{8,16}$/
+            //test()方法用于检验字符串是否符合我的规则
+            var usernameSpanObj = document.getElementById("usernameSpan")
+            //innerHEML表示起始标签之间的内容
+            //可读可写
+            if(patt.test(usernameText))
+                usernameSpanObj.innerHTML = "用户名合法"
+            else
+                usernameSpanObj.innerHTML = "用户名不合法"
+        }
+    </script>
+</head>
+<body>
+    用户名：<input type="text" id="username" value="ylb"/>
+    <span id="usernameSpan" style="color: red"></span>
+    <button onclick="onclickFun()">验证</button>
+</body>
+</html>

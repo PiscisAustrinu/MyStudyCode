@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">工厂通风系统界面</string>
+    <string name="hello">Hello World, Activity Communication!</string>
+    <string name="action_settings">Settings</string>
+</resources>

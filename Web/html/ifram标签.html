@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ifram标签</title>
+</head>
+<body>
+    我是一个单独的完整的页面<br/>
+    <!-- ifram标签可以在一个html页面上打开一个小窗口，去加载一个单独的页面
+            ifram标签和a标签组合使用的步骤
+                1.在ifram标签中使用name属性定义一个名称
+                2.在a标签的target属性上设置ifram的name属性值
+    -->
+    <iframe src="img标签.html" width="750" height="1000" name="abc"></iframe>
+    <br/>
+    <ul>
+        <li><a href="列表标签.html" target="abc">0.列表标签</a></li>
+        <li><a href="表格标签.html" target="abc">1.表格标签</a></li>
+        <li><a href="表格跨行跨列.html" target="abc">2.表格跨行跨列</a></li>
+    </ul>
+</body>
+</html>
