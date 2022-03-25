@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0254ee6f-b4a0-48e5-be8a-b4461d4ec2db" name="Changes" comment="My Study Code">
-      <change afterPath="$PROJECT_DIR$/SpringBoot-demo1/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringBoot-demo1/src/main/java/com/Ylb/SpringBoot/bean/Phone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot-demo1/SpringBoot-demo1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot-demo1/SpringBoot-demo1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot-demo1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot-demo1/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringBoot-demo1/src/main/java/com/Ylb/SpringBoot/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot-demo1/src/main/java/com/Ylb/SpringBoot/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringBoot-demo1/src/main/java/com/Ylb/SpringBoot/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot-demo1/src/main/java/com/Ylb/SpringBoot/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot-demo1/src/main/java/com/Ylb/SpringBoot/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot-demo1/src/main/java/com/Ylb/SpringBoot/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot-demo1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot-demo1/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot-demo1/target/classes/com/Ylb/SpringBoot/controller/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot-demo1/target/classes/com/Ylb/SpringBoot/controller/HelloController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +76,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
   <component name="RunManager">
     <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -94,6 +100,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0254ee6f-b4a0-48e5-be8a-b4461d4ec2db" name="Changes" comment="" />
@@ -103,7 +112,7 @@
       <updated>1648126094909</updated>
       <workItem from="1648126098863" duration="2368000" />
       <workItem from="1648128538793" duration="1038000" />
-      <workItem from="1648169628232" duration="11775000" />
+      <workItem from="1648169628232" duration="16504000" />
     </task>
     <task id="LOCAL-00001" summary="My Study Code">
       <created>1648127988891</created>
@@ -154,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648178307022</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="My Study Code">
+      <created>1648186874293</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1648186874293</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,5 +191,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="My Study Code" />
     <option name="LAST_COMMIT_MESSAGE" value="My Study Code" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

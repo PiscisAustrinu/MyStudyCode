@@ -1,7 +1,11 @@
 package com.Ylb.SpringBoot.config;
 
+import com.Ylb.SpringBoot.bean.Phone;
 import com.Ylb.SpringBoot.bean.pet;
 import com.Ylb.SpringBoot.bean.user;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -19,20 +23,23 @@ import org.springframework.context.annotation.Import;
  * 4、@Import(user.class)
  *  给容器中自动创建出这两个类型的组件、默认组件的名字就是全类名
  */
-@Import(user.class)
 @Configuration(proxyBeanMethods = true)
+@EnableConfigurationProperties(Phone.class)
+//1、开启Phone配置绑定功能
+//2、把Phone组件自动注册到容器中
 public class SpringConfig {
     /**
      * 外部无论对配置类中的这个组件注册方法调用多少次获取的都是之前注册到容器中的单实例对象
      * @return
      */
+    @ConditionalOnBean(name = "getPet")
     @Bean
     public user getUser(){
         user user = new user("杨凌波",21);
         user.setPet(getPet());
         return user;
     }
-    @Bean
+    @Bean("getPet")
     public pet getPet(){
         return new pet("Tomcat");
     }

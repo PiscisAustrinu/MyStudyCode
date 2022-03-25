@@ -23,23 +23,28 @@ public class MainApplication {
              names) {
             System.out.println(name);
         }
+//
+//        user user = run.getBean("getUser", com.Ylb.SpringBoot.bean.user.class);
+//        pet pet = run.getBean("getPet", com.Ylb.SpringBoot.bean.pet.class);
+//        System.out.println(user);
+//        System.out.println(pet);
+//        SpringConfig config = run.getBean(SpringConfig.class);
+//        com.Ylb.SpringBoot.bean.user user1 = config.getUser();
+//        com.Ylb.SpringBoot.bean.user user2 = config.getUser();
+//        System.out.println(user1==user2);
+//        System.out.println("用户的宠物："+(user1.getPet()==pet));
+//
+//
+//        System.out.println("====");
+//        String[] beanNamesForType = run.getBeanNamesForType(com.Ylb.SpringBoot.bean.user.class);
+//        for (String name :
+//                beanNamesForType) {
+//            System.out.println(name);
+//        }
+        boolean pet = run.containsBean("getPet");
+        System.out.println("容器中是否有getPet组件："+pet);
+        boolean user = run.containsBean("getUser");
+        System.out.println("容器中是否有getUser组件："+user);
 
-        user user = run.getBean("getUser", com.Ylb.SpringBoot.bean.user.class);
-        pet pet = run.getBean("getPet", com.Ylb.SpringBoot.bean.pet.class);
-        System.out.println(user);
-        System.out.println(pet);
-        SpringConfig config = run.getBean(SpringConfig.class);
-        com.Ylb.SpringBoot.bean.user user1 = config.getUser();
-        com.Ylb.SpringBoot.bean.user user2 = config.getUser();
-        System.out.println(user1==user2);
-        System.out.println("用户的宠物："+(user1.getPet()==pet));
-
-
-        System.out.println("====");
-        String[] beanNamesForType = run.getBeanNamesForType(com.Ylb.SpringBoot.bean.user.class);
-        for (String name :
-                beanNamesForType) {
-            System.out.println(name);
-        }
     }
 }
