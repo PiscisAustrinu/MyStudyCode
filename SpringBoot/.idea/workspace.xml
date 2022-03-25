@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0254ee6f-b4a0-48e5-be8a-b4461d4ec2db" name="Changes" comment="My Study Code">
+      <change afterPath="$PROJECT_DIR$/SpringBoot-demo1/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot-demo1/src/main/java/com/Ylb/SpringBoot/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot-demo1/src/main/java/com/Ylb/SpringBoot/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot-demo1/src/main/java/com/Ylb/SpringBoot/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot-demo1/src/main/java/com/Ylb/SpringBoot/config/SpringConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +24,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="9a215187-a751-466c-a38e-c0636169b73d" />
@@ -48,8 +59,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="15" />
-    <property name="RequestMappingsPanelWidth1" value="15" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -71,6 +82,7 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.Ylb.SpringBoot.MainApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -91,7 +103,7 @@
       <updated>1648126094909</updated>
       <workItem from="1648126098863" duration="2368000" />
       <workItem from="1648128538793" duration="1038000" />
-      <workItem from="1648169628232" duration="1705000" />
+      <workItem from="1648169628232" duration="11775000" />
     </task>
     <task id="LOCAL-00001" summary="My Study Code">
       <created>1648127988891</created>
@@ -107,7 +119,42 @@
       <option name="project" value="LOCAL" />
       <updated>1648128343306</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="My Study Code">
+      <created>1648171540896</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648171540896</updated>
+    </task>
+    <task id="LOCAL-00004" summary="My Study Code">
+      <created>1648174027538</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648174027538</updated>
+    </task>
+    <task id="LOCAL-00005" summary="My Study Code">
+      <created>1648174386557</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648174386557</updated>
+    </task>
+    <task id="LOCAL-00006" summary="My Study Code">
+      <created>1648174415341</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1648174415341</updated>
+    </task>
+    <task id="LOCAL-00007" summary="My Study Code">
+      <created>1648178307022</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1648178307022</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

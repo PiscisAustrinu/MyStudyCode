@@ -33,5 +33,13 @@ public class MainApplication {
         com.Ylb.SpringBoot.bean.user user2 = config.getUser();
         System.out.println(user1==user2);
         System.out.println("用户的宠物："+(user1.getPet()==pet));
+
+
+        System.out.println("====");
+        String[] beanNamesForType = run.getBeanNamesForType(com.Ylb.SpringBoot.bean.user.class);
+        for (String name :
+                beanNamesForType) {
+            System.out.println(name);
+        }
     }
 }

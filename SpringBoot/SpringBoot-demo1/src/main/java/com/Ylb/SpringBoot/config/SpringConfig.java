@@ -4,6 +4,7 @@ import com.Ylb.SpringBoot.bean.pet;
 import com.Ylb.SpringBoot.bean.user;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 /**
  * Author：Yang Lingbo
@@ -15,7 +16,10 @@ import org.springframework.context.annotation.Configuration;
  *  Full(proxyBeanMethods = true)【保证每个@Bean方法被调用多次返回的组件都是单实例的】
  *  Lite(proxyBeanMethods = false)【每个@Bean方法被调用多少次返回的组件都是新建的】
  *  组建依赖必须使用Full模式默认，其他都是Lite模式
+ * 4、@Import(user.class)
+ *  给容器中自动创建出这两个类型的组件、默认组件的名字就是全类名
  */
+@Import(user.class)
 @Configuration(proxyBeanMethods = true)
 public class SpringConfig {
     /**
