@@ -1,0 +1,13 @@
+spring:
+#  mvc:
+#    static-path-pattern: /res/**
+#  会影响welcome page，和Favicon功能
+  resources:
+#    static-location: [classpath: /public/]
+#    add-mappings: false
+#    禁用所有静态资源规划
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+#  开启表单提交REST风格
