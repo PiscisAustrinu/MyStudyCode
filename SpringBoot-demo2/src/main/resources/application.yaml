@@ -11,3 +11,5 @@ spring:
       filter:
         enabled: true
 #  开启表单提交REST风格
+  contentnegotiation:
+    favor-parameter: true  #开启请求参数内容协商模式

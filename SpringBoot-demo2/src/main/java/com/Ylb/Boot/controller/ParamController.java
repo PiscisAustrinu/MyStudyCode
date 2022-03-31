@@ -1,5 +1,6 @@
 package com.Ylb.Boot.controller;
 
+import com.Ylb.Boot.bean.Person;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
@@ -63,5 +64,18 @@ public class ParamController {
         map.put("bossAge",bossAge);
         map.put("empAge",empAge);
         return map;
+    }
+
+    /**
+     * 数据绑定：页面提交的请求数据（GET、POST）都可以和对象属性进行绑定
+     * 使用ServletModelAttributeMethodProcessor进行数据封装
+     * 底层使用WebDataBinder进行数据绑定
+     * WebDataBinder使用它里面的Converts将请求数据转换为指定的数据类型，再次封装到JavaBean中
+     * @param person
+     * @return person
+     */
+    @PostMapping("/saveUser")
+    public Person savePerson(Person person){
+        return person;
     }
 }
